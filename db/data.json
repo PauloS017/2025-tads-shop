@@ -1,0 +1,14 @@
+{
+  "marcas": [
+    { "id": 1, "nome": "Samsung" },
+    { "id": 2, "nome": "Apple" },
+    { "id": 3, "nome": "Sony" },
+    { "id": 4, "nome": "LG" },
+    { "id": 5, "nome": "Dell" },
+    { "id": 6, "nome": "HP" },
+    { "id": 7, "nome": "Lenovo" },
+    { "id": 8, "nome": "Asus" },
+    { "id": 9, "nome": "Acer" },
+    { "id": 10, "nome": "Microsoft" }
+  ]
+}

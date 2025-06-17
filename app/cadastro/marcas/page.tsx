@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { PlusCircle } from "lucide-react";
 import { MarcasList } from "./marcas-list";
 import Link from "next/link";
-export default function PageMarcas() {
+import { Marca } from "@/models/marca";
+export const dynamic = 'force-dynamic';
+export default async function PageMarcas() {
+  const response = await fetch('http://localhost:3002/marcas')
+  const marcas:Marca[] = await response.json();
   return (
     <section className="p-8">
       <div className="flex items-center justify-between">
@@ -20,7 +24,7 @@ export default function PageMarcas() {
           </Button>
         </Link>
       </div>
-      <MarcasList />
+      <MarcasList marcas={marcas} />
     </section>
   );
 }

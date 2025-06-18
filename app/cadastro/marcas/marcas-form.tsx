@@ -1,5 +1,6 @@
 "use client";
 
+import { criarMarca } from "@/actions/marca-actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,7 +10,7 @@ import Link from "next/link";
 export function MarcasForm() {
   return (
     <section className="mt-8">
-      <form className="max-w-2xl">
+      <form action={criarMarca}className="max-w-2xl">
         <div className="space-y-4">
           <Label htmlFor="nome">Nome</Label>
           <Input name="nome" />
@@ -20,7 +21,7 @@ export function MarcasForm() {
               Cancelar
             </Button>
           </Link>
-          <Button type="button">
+          <Button type="submit">
             <SaveIcon />
             Salvar
           </Button>

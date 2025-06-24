@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation"
 
 export async function criarMarca(formData:FormData) {
-   let response = fetch('http://localhost:3002/marcas',{
+   let response = await fetch('http://localhost:3002/marcas',{
         method:'POST',
         body: JSON.stringify({nome:formData.get('nome')})
 

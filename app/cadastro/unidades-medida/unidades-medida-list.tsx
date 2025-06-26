@@ -1,5 +1,5 @@
-"use client";
 
+import { DeleteButton } from "@/components/delete-button";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -9,9 +9,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { UnidadeMedida } from "@/models/unidadeMedida";
 import { Edit, Trash } from "lucide-react";
 
-export function UnidadesMedidaList() {
+export async function UnidadesMedidaList() {
+  await new Promise((resolve)=>{setTimeout(resolve, 3000)})
+  const response = await fetch('http://localhost:3002/unidademedida',{
+    cache:'no-store'
+  })
+   const unidadeMedidas:UnidadeMedida[] = await response.json();
   return (
     <section className="mt-8 rounded-md border">
       <Table>
@@ -24,37 +30,24 @@ export function UnidadesMedidaList() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          <TableRow>
-            <TableCell className="font-medium">1</TableCell>
-            <TableCell>Unidade 1</TableCell>
-            <TableCell>Sim</TableCell>
+           {unidadeMedidas.map((unidadeMedida)=>(
+          <TableRow key={unidadeMedida.id}>
+            <TableCell className="font-medium">{unidadeMedida.id}</TableCell>
+            <TableCell>{unidadeMedida.nome}</TableCell>
+            <TableCell>{unidadeMedida.fracionado}</TableCell>
             <TableCell>
               <div className="flex gap-2">
                 <Button size="icon">
                   <Edit />
                 </Button>
-                <Button size="icon" variant="destructive">
-                  <Trash />
-                </Button>
+                <DeleteButton>
+                </DeleteButton>
               </div>
             </TableCell>
           </TableRow>
-          <TableRow>
-            <TableCell className="font-medium">2</TableCell>
-            <TableCell>Unidade 2</TableCell>
-            <TableCell>Não</TableCell>
-            <TableCell>
-              <div className="flex gap-2">
-                <Button size="icon">
-                  <Edit />
-                </Button>
-                <Button size="icon" variant="destructive">
-                  <Trash />
-                </Button>
-              </div>
-            </TableCell>
-          </TableRow>
+          ))}
         </TableBody>
+
       </Table>
     </section>
   );

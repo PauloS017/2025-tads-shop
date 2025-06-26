@@ -81,6 +81,26 @@
     {
       "id": "086b",
       "nome": "Paulo"
+    },
+    {
+      "id": "6c97",
+      "nome": "Luan",
+      "fracionado": "on"
+    },
+    {
+      "id": "89dd",
+      "nome": "Luan",
+      "fracionado": "on"
+    },
+    {
+      "id": "e54a",
+      "nome": "Luan",
+      "fracionado": "Sim"
+    },
+    {
+      "id": "b46b",
+      "nome": "Felipe",
+      "fracionado": "Não"
     }
   ]
 }

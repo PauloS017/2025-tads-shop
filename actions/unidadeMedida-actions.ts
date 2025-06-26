@@ -5,7 +5,7 @@ import { redirect } from "next/navigation"
 export async function criarUnidadeMedida(formData:FormData) {
    let response = await fetch('http://localhost:3002/unidademedida',{
         method:'POST',
-        body: JSON.stringify({nome:formData.get('nome')})
+        body: JSON.stringify({nome:formData.get('nome'),fracionado:formData.get('fracionado')})
 
     })
     redirect("/cadastro/grupos-produto/")

@@ -5,7 +5,7 @@ import { MarcasList } from "./marcas-list";
 import Link from "next/link";
 import { Suspense } from "react";
 export default function PageMarcas() {
-
+ 
   return (
     <section className="p-8">
       <div className="flex items-center justify-between">
@@ -22,7 +22,7 @@ export default function PageMarcas() {
           </Button>
         </Link>
       </div>
-      <Suspense fallback = {<div className=" text-green-600">Carregando</div>}>
+      <Suspense fallback={<div className="text-green-400">Carregando</div>}>
         <MarcasList />
       </Suspense>
     </section>

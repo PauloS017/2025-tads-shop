@@ -1,21 +1,30 @@
 'use server'
 
+import { stringifyFormData } from "@/lib/helpers"
 import { redirect } from "next/navigation"
+const API_URL = process.env.API_URL
+const headers = {
+    'Content-Type': 'application/json'
+}
+ export type MarcaFormstate={
+    nome:String
+}
 
-export async function criarMarca(formData:FormData) {
-   let response = await fetch('http://localhost:3002/marcas',{
+export async function criarMarca(prevState:MarcaFormstate,formData:FormData){
+        let response = await fetch(`${API_URL}/marca`,{
+        headers,
         method:'POST',
-        body: JSON.stringify({nome:formData.get('nome')})
-
+        body:stringifyFormData(formData)
     })
-    redirect("/cadastro/marcas/")
+     //console.log(await response.json())
+    await new Promise((resolve)=>{setTimeout(resolve,3000)})
+    return prevState
+    redirect('/cadastro/marcas/')
+}
+export async function deletarMarca(id:number){
+    let response = await fetch(`${API_URL}/marca/${id}`,{
+        method:'DELETE',
+    })
+    redirect('/cadastro/marcas/')
 }
 
-export async function deletarMarca(formData:FormData) {
-       let response = fetch('http://localhost:3002/marcas',{
-        method:'DELETE',
-        body: JSON.stringify({nome:formData.get('id')})
-       })
-       
-    redirect("/cadastro/marcas/")
-}

@@ -40,8 +40,7 @@ export async function UnidadesMedidaList() {
                 <Button size="icon">
                   <Edit />
                 </Button>
-                <DeleteButton>
-                </DeleteButton>
+                <DeleteButton id={unidadeMedida.id}/>
               </div>
             </TableCell>
           </TableRow>

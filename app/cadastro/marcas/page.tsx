@@ -4,7 +4,9 @@ import { PlusCircle } from "lucide-react";
 import { MarcasList } from "./marcas-list";
 import Link from "next/link";
 import { Suspense } from "react";
+import { toast } from "sonner";
 export default function PageMarcas() {
+ 
  
   return (
     <section className="p-8">

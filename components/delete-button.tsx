@@ -13,18 +13,24 @@ import {
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
 import { Trash } from "lucide-react"
+import { toast } from "sonner"
 type DeleteButtonProps = {
   id: number
 }
-export function DeleteButton({id }: DeleteButtonProps) {
+export function DeleteButton({ id }: DeleteButtonProps) {
 
   const handleDelete = async () => {
-    await deletarMarca(id)
+    const { sucesso, mensagem } = await deletarMarca(id)
+    if (sucesso) {
+      toast.success(mensagem)
+    } else {
+      toast.error(mensagem)
+    }
   }
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="destructive" size='icon'><Trash/></Button>
+        <Button variant="destructive" size='icon'><Trash /></Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>

@@ -10,15 +10,16 @@ import {
 } from "@/components/ui/table";
 import { Marca } from "@/models/marca";
 import { Edit, Trash } from "lucide-react";
+import Link from "next/link";
 
 
 export async function MarcasList() {
-   //await new Promise((resolve)=>{setTimeout(resolve,3000)})
+  //await new Promise((resolve)=>{setTimeout(resolve,3000)})
 
-   const response = await fetch(`${process.env.API_URL}/marca`,{
-     cache:'no-store'
-   })
-   const marcas:Marca[] = await response.json();
+  const response = await fetch(`${process.env.API_URL}/marca`, {
+    cache: 'no-store'
+  })
+  const marcas: Marca[] = await response.json();
   return (
     <section className="mt-8 rounded-md border">
       <Table>
@@ -36,10 +37,10 @@ export async function MarcasList() {
               <TableCell>{marca.nome}</TableCell>
               <TableCell>
                 <div className="flex gap-2">
-                  <Button size="icon">
-                    <Edit />
+                  <Button size="icon" asChild>
+                    <Link href={`/cadastro/marcas/editar/${marca.id}`}><Edit/></Link>
                   </Button>
-                  <DeleteButton id={marca.id}/>
+                  <DeleteButton id={marca.id} />
                 </div>
               </TableCell>
             </TableRow>

@@ -1,4 +1,4 @@
 export type Marca = {
-    id:number,
+    id:string,
     nome:string
 }

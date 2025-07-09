@@ -2,7 +2,7 @@
   "marca": [
     {
       "id": "1",
-      "nome": "Samsung"
+      "nome": "Nvidea2"
     },
     {
       "id": "2",
@@ -11,18 +11,6 @@
     {
       "id": "3",
       "nome": "Sony"
-    },
-    {
-      "id": "a9ba",
-      "nome": "Nvidia"
-    },
-    {
-      "id": "51c4",
-      "nome": "Luan"
-    },
-    {
-      "id": "07ef",
-      "nome": "Lg"
     }
   ],
   "grupo": [

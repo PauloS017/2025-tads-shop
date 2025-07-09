@@ -1,51 +1,65 @@
-'use server'
+"use server";
 
-import { stringifyFormData } from "@/lib/helpers"
-import { revalidatePath } from "next/cache"
-import { redirect } from "next/navigation"
-const API_URL = process.env.API_URL
+import { stringifyFormData } from "@/lib/helpers";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
+const API_URL = process.env.API_URL;
 const headers = {
-    'Content-Type': 'application/json'
-}
-export type MarcaFormstate = {
-    nome: String
+  "Content-Type": "application/json",
+};
+
+export type MarcaFormState = {
+  nome: string;
+};
+export async function criarMarca(
+  prevState: MarcaFormState,
+  formData: FormData
+) {
+  let response = await fetch(`${API_URL}/marca`, {
+    headers,
+    method: "POST",
+    body: stringifyFormData(formData),
+  });
+
+  await new Promise((resolve) => {
+    setTimeout(resolve, 3000);
+  });
+  return prevState;
+  redirect("/cadastro/marcas/");
 }
 
-export async function editarMarca(prevState: MarcaFormstate, formData: FormData) {
-    const id = formData.get("id");
-    let response = await fetch(`${API_URL}/marca`, {
-        headers,
-        method: 'PUT',
-        body: stringifyFormData(formData)
-    })
+export async function editarMarca(
+  prevState: MarcaFormState,
+  formData: FormData
+) {
 
-}
-export async function criarMarca(prevState: MarcaFormstate, formData: FormData) {
-    let response = await fetch(`${API_URL}/marca`, {
-        headers,
-        method: 'POST',
-        body: stringifyFormData(formData)
-    })
-    //console.log(await response.json())
-    await new Promise((resolve) => { setTimeout(resolve, 3000) })
-    return prevState
-    redirect('/cadastro/marcas/')
+  const id = formData.get("id");
+  let response = await fetch(`${API_URL}/marca/${id}`, {
+    headers,
+    method: "PUT",
+    body: stringifyFormData(formData),
+  });
+  
+  await new Promise((resolve) => {
+    setTimeout(resolve, 3000);
+  });
+  return prevState;
+  redirect("/cadastro/marcas/");
 }
 export async function deletarMarca(id: string) {
-    let response = await fetch(`${API_URL}/marca/${id}`, {
-        method: 'DELETE',
-    })
-    if (response.status != 204) {
-        return {
-            sucesso: false,
-            mensagem: 'Erro ao excluir Marca'
+  let response = await fetch(`${API_URL}/marca/${id}`, {
+    method: "DELETE",
+  });
 
-        }
-    }
-    revalidatePath('/cadastro/marcas/')
+  if (response.status !== 204 && response.status !== 200) {
     return {
-        sucesso: true,
-        mensagem: 'Marca excluida com Sucesso'
-    }
+      sucesso: false,
+      mensagem: `Erro ao excluir a marca`,
+    };
+  }
+  revalidatePath("/cadastro/marcas");
+  return {
+    sucesso: true,
+    mensagem: `Marca excluída com sucesso`,
+  };
 }
-

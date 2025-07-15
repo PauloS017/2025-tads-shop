@@ -2,15 +2,11 @@
   "marca": [
     {
       "id": "1",
-      "nome": "Nvidea2"
+      "nome": "Nvidea"
     },
     {
       "id": "2",
       "nome": "Apple"
-    },
-    {
-      "id": "3",
-      "nome": "Sony"
     }
   ],
   "grupo": [

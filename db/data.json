@@ -1,12 +1,249 @@
 {
-  "marca": [
+   "marca": [
     {
-      "id": "1",
-      "nome": "Nvidea"
+      "id": "f79e",
+      "nome": "Sony "
     },
     {
-      "id": "2",
+      "id": "bf80",
+      "nome": "Microsoft"
+    }
+    ,
+    {
+      "id": "c1d2",
+      "nome": "Asus"
+    },
+    {
+      "id": "d3e4",
+      "nome": "Lenovo"
+    },
+    {
+      "id": "e5f6",
+      "nome": "Acer"
+    },
+    {
+      "id": "a123",
+      "nome": "Samsung"
+    },
+    {
+      "id": "b456",
       "nome": "Apple"
+    },
+    {
+      "id": "c789",
+      "nome": "LG"
+    },
+    {
+      "id": "d012",
+      "nome": "Dell"
+    },
+    {
+      "id": "e345",
+      "nome": "HP"
+    },
+    {
+      "id": "f456",
+      "nome": "Intel"
+    },
+    {
+      "id": "g567",
+      "nome": "AMD"
+    },
+    {
+      "id": "h678",
+      "nome": "Nvidia"
+    },
+    {
+      "id": "i789",
+      "nome": "Canon"
+    },
+    {
+      "id": "j890",
+      "nome": "Nikon"
+    },
+    {
+      "id": "k901",
+      "nome": "Panasonic"
+    },
+    {
+      "id": "l012",
+      "nome": "Philips"
+    },
+    {
+      "id": "m123",
+      "nome": "Xiaomi"
+    },
+    {
+      "id": "n234",
+      "nome": "Huawei"
+    },
+    {
+      "id": "o345",
+      "nome": "OnePlus"
+    },
+    {
+      "id": "p456",
+      "nome": "Motorola"
+    },
+    {
+      "id": "q567",
+      "nome": "Nokia"
+    },
+    {
+      "id": "r678",
+      "nome": "Realme"
+    },
+    {
+      "id": "s789",
+      "nome": "Oppo"
+    },
+    {
+      "id": "t890",
+      "nome": "Vivo"
+    },
+    {
+      "id": "u901",
+      "nome": "Google"
+    },
+    {
+      "id": "v012",
+      "nome": "Tesla"
+    },
+    {
+      "id": "w123",
+      "nome": "BMW"
+    },
+    {
+      "id": "x234",
+      "nome": "Mercedes-Benz"
+    },
+    {
+      "id": "y345",
+      "nome": "Audi"
+    },
+    {
+      "id": "z456",
+      "nome": "Volkswagen"
+    },
+    {
+      "id": "aa567",
+      "nome": "Toyota"
+    },
+    {
+      "id": "bb678",
+      "nome": "Honda"
+    },
+    {
+      "id": "cc789",
+      "nome": "Ford"
+    },
+    {
+      "id": "dd890",
+      "nome": "Chevrolet"
+    },
+    {
+      "id": "ee901",
+      "nome": "Hyundai"
+    },
+    {
+      "id": "ff012",
+      "nome": "Kia"
+    },
+    {
+      "id": "gg123",
+      "nome": "Nissan"
+    },
+    {
+      "id": "hh234",
+      "nome": "Mazda"
+    },
+    {
+      "id": "ii345",
+      "nome": "Nike"
+    },
+    {
+      "id": "jj456",
+      "nome": "Adidas"
+    },
+    {
+      "id": "kk567",
+      "nome": "Puma"
+    },
+    {
+      "id": "ll678",
+      "nome": "Under Armour"
+    },
+    {
+      "id": "mm789",
+      "nome": "Reebok"
+    },
+    {
+      "id": "nn890",
+      "nome": "New Balance"
+    },
+    {
+      "id": "oo901",
+      "nome": "Converse"
+    },
+    {
+      "id": "pp012",
+      "nome": "Vans"
+    },
+    {
+      "id": "qq123",
+      "nome": "Zara"
+    },
+    {
+      "id": "rr234",
+      "nome": "H&M"
+    },
+    {
+      "id": "ss345",
+      "nome": "Uniqlo"
+    },
+    {
+      "id": "tt456",
+      "nome": "Gap"
+    },
+    {
+      "id": "uu567",
+      "nome": "Levi's"
+    },
+    {
+      "id": "vv678",
+      "nome": "Calvin Klein"
+    },
+    {
+      "id": "ww789",
+      "nome": "Tommy Hilfiger"
+    },
+    {
+      "id": "xx890",
+      "nome": "Ralph Lauren"
+    },
+    {
+      "id": "yy901",
+      "nome": "Hugo Boss"
+    },
+    {
+      "id": "zz012",
+      "nome": "Gucci"
+    },
+    {
+      "id": "aaa123",
+      "nome": "Louis Vuitton"
+    },
+    {
+      "id": "bbb234",
+      "nome": "Prada"
+    },
+    {
+      "id": "ccc345",
+      "nome": "Chanel"
+    },
+    {
+      "id": "ddd456",
+      "nome": "Hermès"
     }
   ],
   "grupo": [
